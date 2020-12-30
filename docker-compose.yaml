@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    image: techno/sqldef:0.8.7
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MYSLQDEF_URL: https://github.com/k0kubun/sqldef/releases/download/v0.8.7/mysqldef_linux_amd64.tar.gz
+        PSQLDEF_URL: https://github.com/k0kubun/sqldef/releases/download/v0.8.7/psqldef_linux_amd64.tar.gz
+        SQLITE3DEF_URL: https://github.com/k0kubun/sqldef/releases/download/v0.8.7/sqlite3def_linux_amd64.tar.gz
